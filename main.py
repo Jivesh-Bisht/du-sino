@@ -33,5 +33,14 @@ def rps():
 
     return res
 
+@app.route('/signup',methods = ['POST'])
+def signup():
+    id=request.args.get('id')
+    email=request.args.get('email')
+    username=request.args.get('username')
+    password=request.args.get('password')
+
+    # add this shit to db
+
 if __name__ == '__main__': 
     app.run(debug=True, port=6969)
