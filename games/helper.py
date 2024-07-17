@@ -1,0 +1,6 @@
+
+def add_money(amount:int,uid:int):
+    ...
+
+def remove_money(amount:int,uid:int):
+    ...

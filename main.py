@@ -1,6 +1,8 @@
 import json 
 from flask import Flask, jsonify, request
 from games.russian_roulette import roulette
+from games.rps import rps
+from games.helper import add_money,remove_money
 
 app = Flask(__name__) 
 
@@ -25,9 +27,9 @@ def rps():
     choice=request.args.get('choice')
     res = rps(amount,uid,choice)
     if res["result"]=="won":
-        ... # add money
+        add_money(amount,uid)
     else:
-        ...# remove money
+        remove_money(amount,uid)
 
     return res
 
