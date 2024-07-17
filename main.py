@@ -18,6 +18,18 @@ def russian_roulette():
     res = roulette(amount,uid)
     return {"won":res}
 
-    return balance
+@app.route('/rps', methods = ['GET']) 
+def rps(): 
+    uid = request.args.get('uid')
+    amount=request.args.get('amount')
+    choice=request.args.get('choice')
+    res = rps(amount,uid,choice)
+    if res["result"]=="won":
+        ... # add money
+    else:
+        ...# remove money
+
+    return res
+
 if __name__ == '__main__': 
     app.run(debug=True, port=6969)
