@@ -39,7 +39,7 @@ def signup():
     email=request.args.get('email')
     username=request.args.get('username')
     password=request.args.get('password')
-
+    
     # add this shit to db
 
 if __name__ == '__main__': 
