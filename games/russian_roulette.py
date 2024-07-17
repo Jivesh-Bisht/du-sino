@@ -1,5 +1,4 @@
 import random
-import time
 
 def roulette(amount:int,uid:int) -> bool:
     """
