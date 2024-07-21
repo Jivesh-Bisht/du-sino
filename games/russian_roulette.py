@@ -9,7 +9,7 @@ def roulette(amount:int,uid:int) -> bool:
     even position:computer
     """
     
-    choice = random.choice([1,2,3,4,5,6],[23,9,23,11,23,11])
+    choice = random.choice([1,2,3,4,5,6],[18,10,23,11,25,13])
 
     if choice in [2,4,6]:
         add_money(amount,uid)
