@@ -19,7 +19,7 @@ def russian_roulette():
     uid = request.args.get('uid')
     amount=request.args.get('amount')
     res = roulette(amount,uid)
-    return {"won":res}
+    return res
 
 @app.route('/rps', methods = ['GET']) 
 def rps(): 
