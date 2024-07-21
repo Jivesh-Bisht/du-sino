@@ -11,5 +11,8 @@ class Logger():
     def won(self,game:str,amount:int,uid:int ):
         cursor.execute('INSERT INTO logs(logtype,log,uid) VALUES(?,?,?)',('won',f'{uid} won {amount} in {game}',uid))
 
+    def lost(self,game:str,amount:int,uid:int ):
+        cursor.execute('INSERT INTO logs(logtype,log,uid) VALUES(?,?,?)',('won',f'{uid} lost {amount} in {game}',uid))
+
     def error(self,err:str):
         cursor.execute('INSERT INTO logs(logtype,log,uid) VALUES(?,?,0)',('errlog',err))
