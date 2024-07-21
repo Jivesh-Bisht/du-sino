@@ -1,8 +1,9 @@
 import sqlite3 
   
+
 conn = sqlite3.connect('logs.db') 
-  
 cursor = conn.cursor() 
+
 
 class Logger():
     def log(self,log:str):

@@ -1,12 +1,15 @@
 import random
 from logger import Logger
+
+
 choices = ["rock","paper","scissor"]
+
 
 def rps(amount:int,uid:int,choice):
     comp = random.choice(choices)
     user_action=choice
     computer_action=comp
-    
+
     if choice in choices:
         if comp==choice:
             Logger.won(game='rps',amount=0,uid=uid)
