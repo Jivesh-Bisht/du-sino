@@ -2,7 +2,8 @@ import json
 from flask import Flask, jsonify, request
 from games.russian_roulette import roulette
 from games.rps import rps
-from games.helper import add_money,remove_money
+from games.helper import add_money,remove_money,get_money
+
 
 app = Flask(__name__) 
 
@@ -10,7 +11,7 @@ app = Flask(__name__)
 @app.route('/balance', methods = ['GET']) 
 def balance(): 
     uid = request.args.get('uid')
-    balance = 0 # add balance
+    balance = get_money(uid)
     return balance
 
 @app.route('/russian_roulette', methods = ['GET']) 
